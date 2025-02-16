@@ -24,7 +24,7 @@ const Room = ({ username, room, socket }) => {
         getOldMessages()
     }, [])
 
-    useEffect(_ => {
+    useEffect(() => {
         socket.emit("joined_room", { username, room })
 
         //listen with key

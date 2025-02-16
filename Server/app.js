@@ -5,7 +5,7 @@ require("./config/db"); // Modularized DB connection
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({ origin: "*" }));
 
 // routes
 const messageRoutes = require("./routes/Message");

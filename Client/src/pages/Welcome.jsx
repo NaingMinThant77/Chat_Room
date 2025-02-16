@@ -7,7 +7,7 @@ const Welcome = ({ username, setUsername, room, setRoom, setSocket }) => {
     const joinRoom = (e) => {
         e.preventDefault();
         if (username.trim().length > 0 && room.trim().length > 0 && room !== "select-room") {
-            const socket = io.connect("http://localhost:3000")
+            const socket = io.connect(import.meta.env.VITE_SERVER)
             setSocket(socket)
             navigate("/chat", { replace: true })
         } else {
